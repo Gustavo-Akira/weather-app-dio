@@ -1,0 +1,16 @@
+<div class="weather-details">
+    <div class="weather-icon">
+        <img [src]="weatherIcon">
+        <span>{{ weatherIn.description }}</span>
+    </div>
+
+    <div class="weather-temp">
+        <h3>{{ transformKelvinToCelsius(weatherIn.temp) }} C</h3>
+        <span>Fell like: {{ transformKelvinToCelsius(weatherIn.feelsLike) }} C</span>
+    </div>
+
+    <div class="weather-misc">
+        <div> Humidity: {{ weatherIn.humidity }}</div>
+        <div> Wind speed: {{ weatherIn.wind.speed }}</div>
+    </div>
+</div>
